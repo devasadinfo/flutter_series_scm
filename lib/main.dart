@@ -1,5 +1,4 @@
-import 'package:demo_counter/expnad_flexible.dart';
-import 'package:demo_counter/liquid_swipe.dart';
+import 'package:demo_counter/pageview/pageview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: ExpandedWidget(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const PageviewData());
   }
 }
