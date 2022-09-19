@@ -40,9 +40,10 @@ class _GridViewbuilderState extends State<GridViewbuilder> {
               color: Colors.orange,
               child: Text(
                 "${list[index]}",
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
+                  fontSize: 20,
                 ),
               ),
             ),
