@@ -1,3 +1,4 @@
+import 'package:demo_counter/image_picker/image_picker.dart';
 import 'package:demo_counter/pageview/pageview.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const PageviewData());
+        home: const ImageShow());
   }
 }
