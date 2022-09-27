@@ -1,0 +1,73 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    const MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'StateLess Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("StateLessWiget"),
+          backgroundColor: Colors.orangeAccent,
+          centerTitle: true,
+        ),
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            custombutton("1Button"),
+            SizedBox(
+              height: 10,
+            ),
+            custombutton("2Button"),
+            SizedBox(
+              height: 10,
+            ),
+            custombutton("3rdButton"),
+            SizedBox(
+              height: 10,
+            ),
+            custombutton("4thButton"),
+            SizedBox(
+              height: 10,
+            )
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class custombutton extends StatelessWidget {
+  final String buttonname;
+  custombutton(this.buttonname);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        print("Hello Developer");
+      },
+      child: Container(
+        height: 30,
+        width: 90,
+        decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.orange,
+        ),
+        child: Center(child: Text(buttonname)),
+      ),
+    );
+  }
+}
