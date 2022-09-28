@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    const MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'StateLess Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("StateLessWiget"),
+          backgroundColor: Colors.orangeAccent,
+          centerTitle: true,
+        ),
+        body: data(),
+      ),
+    );
+  }
+}
+
+class data extends StatefulWidget {
+  const data({Key? key}) : super(key: key);
+
+  @override
+  State<data> createState() => _dataState();
+}
+
+class _dataState extends State<data> {
+  String txt = "";
+  @override
+  void initState() {
+    txt = "Hello Developer";
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(txt),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 30,
+              width: 90,
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: TextButton(
+                onPressed: (() {
+                  print("asad $txt");
+                  setState(() {
+                    txt = "My Name Embars";
+                  });
+                }),
+                child: Text(
+                  "change",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
