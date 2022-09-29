@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   liquid_swipe: ^3.0.0
   image_picker: ^0.8.5+3
+  form_field_validator:
 
 dev_dependencies:
   flutter_test:
