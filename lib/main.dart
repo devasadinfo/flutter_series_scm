@@ -1,6 +1,4 @@
-import 'package:demo_counter/form_validate/home_page.dart';
-import 'package:demo_counter/image_picker/image_picker.dart';
-import 'package:demo_counter/pageview/pageview.dart';
+import 'package:demo_counter/bottom_modal_sheet/modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +16,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomePage());
+        home: const ModalBottomSheet());
   }
 }
