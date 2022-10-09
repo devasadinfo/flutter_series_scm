@@ -1,3 +1,4 @@
+import 'package:demo_counter/alert_dialogue/alert_dialog.dart';
 import 'package:demo_counter/bottom_modal_sheet/modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const ModalBottomSheet());
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const AlertShet(),
+    );
   }
 }
