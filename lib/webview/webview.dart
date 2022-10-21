@@ -1,23 +1,26 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() => runApp(MyApp());
+class WebView extends StatelessWidget {
+  const WebView(
+      {super.key,
+      required String initialUrl,
+      required JavascriptMode javascriptMode});
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        // appBar: AppBar(
-        //   centerTitle: true,
-        //   title: const Text('Secret Lover'),
-        // ),
-        body: WebView(
-          initialUrl: "https://www.facebook.com/",
-          javascriptMode: JavascriptMode.unrestricted,
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("WebView"),
+        centerTitle: true,
+      ),
+      body: WebView(
+        initialUrl: "https://www.facebook.com/",
+        javascriptMode: JavascriptMode.unrestricted,
       ),
     );
   }
